@@ -1,0 +1,30 @@
+body{
+    font-family: cursive;
+
+}
+header{
+    border: solid black;
+    background-color: yellow;
+
+}
+h1{
+    border: dotted grey;
+    text-align: center;
+}
+nav{
+    border: dotted red;
+
+}
+ul{    
+    border: dotted black;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+a{
+    border: solid black;
+    text-decoration: none;
+    color: black;
+}
