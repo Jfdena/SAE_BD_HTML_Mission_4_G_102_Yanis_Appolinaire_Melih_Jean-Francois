@@ -1,9 +1,15 @@
 body{
     font-family: cursive; /*la police d'ecriture*/
+    background-color: black;
 }
 header{
     border: solid grey;
+    border-radius: 10px;
     background-color: skyblue;
+}
+.logo-kdou{
+    width: 5px;
+    height: 5px;
 }
 h1{
     text-align: center;/*aligne le titre*/
@@ -12,9 +18,6 @@ nav{
 }
 ul{ /*Les listes non ordonnées*/
     list-style-type: none; /*enleve les puces*/
-}
-.Nom-Prenom{
-
 }
 .Navigation{
     display: flex; /*rend la navigation flexible*/
@@ -26,20 +29,35 @@ a{ /*les liens sans sans decoration s*/
     color: black;
 }
 main{
-    height: 500px; /*hauteur*/
+    height: 500px;  
 }
 .Principal{ /*div sous forme de page Word*/
-    background-color: gray;
+    border: solid grey;
+    background-color: skyblue;
     width: 70%; /*sa largeur*/
     margin-left: auto;
     margin-right: auto;
-    margin-top: -1em;
+    margin-top: 0px;
     height: 100%;
+    padding-top: 10px;
 }
-div > p{
-
+h2{
+    font-weight: normal;
+    text-align: center;/*aligne la premiere balise p a l'interieur d'un*/
+}
+.Nom-Prenom{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;/*permet de passer a la ligne*/
+    padding: 0;
+}
+.Nom-Prenom li{/*aligne les nom en 2 colonnes de 2*/
+    width: 50%;
+    text-align: center;
+    height: 50px;
 }
 footer{
-    border: dotted black;
+    background-color: rebeccapurple;
 }
+
 
