@@ -11,7 +11,7 @@ header{
 	box-sizing: border-box;
 	text-align: center;
 	padding: 20px;
-	background: linear-gradient(#242829, #6A7DE3, #3F2AA7);
+	background: linear-gradient(135deg, #1a1a73, #4a80e6);
 }
 main{
 	color: white;
@@ -19,7 +19,12 @@ main{
 ul{
 	list-style-type: none;
 }
-.logo-kdou{/*Block du logo*/
+h3 a{
+	color: white;
+}
+
+/*Block du logo*/
+.logo-kdou{
 	width: 100px;
 	height: 100px;
 	position: relative;
@@ -37,7 +42,7 @@ h1{
     text-align: center;
     font-family: cursive;
     text-transform: uppercase;
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 }
 h2{
     font-family: cursive;
@@ -45,6 +50,7 @@ h2{
 a{
     text-decoration: none;
 }
+
 /*navigation atractive*/
 nav{
     font-family: 'Open Sans', sans-serif;
@@ -61,6 +67,8 @@ nav{
 	position: relative;
 	overflow: hidden;
 }
+/*quand on clique sur la nav*/
+
 nav a{
 	font-size: 14px;
 	color: white;
@@ -71,8 +79,10 @@ nav a{
 	display: inline-block;
 	text-align: center;
 }
-.lienNav:hover{
+nav a:hover{/*quand on passe sur les lien de la nav avec la souris*/
+	font-size: 15px;
 }
+
 /*l'animation verte sur la nav*/
 nav .animation{
 	position: absolute;
@@ -122,30 +132,25 @@ nav a:nth-child(5):hover~.animation{
 }
 /*fin*/
 
-
 /*media query permet d'ajuster l'ecran quand on change de d'appareil*/
-@media (max-width:700px){
+@media (max-width:700px)and (min-width:0px){
 	header{
 		padding: 10px;
 	}
-	
-	nav{
-		width: auto;
-		height: auto;
-		max-height: 50px	;
-	}
-	
-	nav a{
-		font-size: 13px;
-		padding: 10px;
-		width: 100%;
-	}
-	
-	  /* Ajuste les titres pour un meilleur affichage sur mobile */
 	h1{
 		font-size: 1.5rem;
 	}
-	
+	nav{
+		width: 430px;
+	}
+	nav a{
+		font-size: 12px;
+		padding: 10px;
+		width: 100%;
+	}
+	nav a:hover{/*quand on passe sur les lien de la nav avec la souris*/
+		font-size: 12.67px;
+	}
 	nav a:nth-child(1){
 		width: 100px;
 	}
@@ -157,49 +162,74 @@ nav a:nth-child(5):hover~.animation{
 		width: 110px;
 	}
 	nav a:nth-child(2):hover~.animation{
-		width: 90px;
-		left: 80px;
+		width: 80px;
+		left: 83px;
 	}
 	nav a:nth-child(3){
 		
 		width: 100px;
 	}
 	nav a:nth-child(3):hover~.animation{
-		width: 90px;
+		width: 80px;
 		left: 170px;
 	}
 	nav a:nth-child(4){
 		width: 100px;
 	}
 	nav a:nth-child(4):hover~.animation{
-		width: 90px;
-		left: 260px;
+		width: 80px;
+		left: 253px;
 	}
 	nav a:nth-child(5){
 		width: 120px;
 	}
 	nav a:nth-child(5):hover~.animation{
-		width: 94px;
-		left: 350px;
+		width: 87px;
+		left: 342px;
 	}
-
 }/*fin media query*/
 
-.pied-page{
-background-color: grey;
-color: black;
-border: solid black;
-border-radius: 10px;
-height: 50px;
+/*le footer*/
+footer{
+	height: 50px;
+	border: solid black;
+	border-radius: 10px;
+	background: linear-gradient(135deg, #1a1a73, #4a80e6);
 }
-
-.img-footer{
+footer img{
 	position: relative;
 	left: 350px;
-	bottom: 50px;
-}
-.pied-page img{
+	bottom: 50px;	
 	width: 50px;
 }
+footer img:hover{
+	height: 52px;
+	width: 52px;
+}
+/*fin footer*/
 
+/*flèche pour retourner en haut*/
+.returnHeight{
+	position: fixed;
+	z-index: 1000;
+	bottom: -530px;
+	right: -325px;
+	width: 420px;
+	height: 600px;
+}
+.returnHeight img{
+	width: 100px;
+	height: 50px;
+}
+.returnHeight img:hover{
+	height: 56px;
+}/*fin fleche*/
+
+
+
+
+/*animation sur nos noms*/
+h3 a:hover{
+	color: pink;
+}
 
