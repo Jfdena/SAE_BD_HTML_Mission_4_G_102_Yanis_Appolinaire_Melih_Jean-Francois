@@ -2,6 +2,8 @@
 body {
 	background: #2c3e50;    
 	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
 }
 header{
 	border: solid #34495e;
@@ -42,7 +44,7 @@ h1{
     text-align: center;
     font-family: cursive;
     text-transform: uppercase;
-	font-size: 1.5rem;
+	font-size: 140%;
 }
 h2{
     font-family: cursive;
@@ -140,25 +142,52 @@ h3 a:hover{
 
 /*le footer*/
 footer{
-	height: 50px;
-	border: solid black;
-	border-radius: 10px;
-	background: linear-gradient(135deg, #1a1a73, #4a80e6);
-}
-footer img{
-	position: relative;
-	left: 350px;
-	bottom: 50px;	
-	width: 50px;
-}
-footer img:hover{
-	height: 52px;
-	width: 52px;
-}/*fin footer*/
+	background-color: #1e1f26;
+	color: #dcdcdc;
 
+}
+footer .footer1{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+footer .footer1-1{
+	flex-direction: row;
+	width: 500px;
+}
+footer h1{
+	text-align: left;
+}
+footer button{
+	font-size: 1.4rem;
+	border: none;
+	color: #dcdcdc;
+	height: 40px;
+	width: 400px;	
+	margin: 0 auto;	
+	background-color: #1b008d;
+}
+.footer2{
+	width: 100%;
+	display: flex;
+}
+.footer2-2{
+	width: 220%;
+	display: flex;
+	background-color: white;
+	height: 0.5px;
+	position: relative;
+	top: 10px;
+}
+.footer2-3 p{
+	display: flex;
+}
+
+
+/* fin du footer */
 
 /*flèche pour retourner en haut*/
-.returnHeight{
+/* .returnHeight{
 	position: fixed;
 	z-index: 1000;
 	bottom: -530px;
@@ -172,7 +201,8 @@ footer img:hover{
 }
 .returnHeight img:hover{
 	height: 56px;
-}/*fin fleche*/
+} */
+/*fin fleche*/
 
 /*media query permet d'ajuster l'ecran quand on change de d'appareil ou quand on reduit la taille de l'onglet */
 @media (max-width:700px){
@@ -231,8 +261,21 @@ footer img:hover{
 		left: 80%;
 	}
 }
+@media (max-width:500px){
+	h1{
+		font-size: 140%;
+	}
+	nav{
+		display: flex;
+		justify-content: space-evenly;
+	}
+	nav a{
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+}/*fin media query*/
 
-/*fin media query*/
+
 
 
 
