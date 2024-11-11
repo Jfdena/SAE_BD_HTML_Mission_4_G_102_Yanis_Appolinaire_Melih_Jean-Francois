@@ -1,22 +1,132 @@
+/* police importé depuis google fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 body {
 	background: #2c3e50;    
 	font-family: sans-serif;
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 }
+
+
+/* Header */
 header{
-	border: solid #34495e;
-	height: 280px;
-	border-radius: 30px;
-	max-width: 100%;
-	box-sizing: border-box;
-	text-align: center;
+	width: 100%;
+	height: auto;
+	margin: 0;
 	padding: 20px;
+	border: solid #34495e;
+	border-radius: 10px;
+	box-sizing: border-box;
 	background: linear-gradient(135deg, #1e1f26, #4a80e6,#1e1f26);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+
 }
-main{
+header h1{ /*Titre de la page*/
+	position: relative;   
+    font-family: cursive;
+    text-transform: uppercase;
+	font-size: 140%;
+}
+nav{/*navigation*/
+    font-family: 'Open Sans', sans-serif;
+	width: 580px;
+	height: 50px;
+
+	background: #34495e;
+	border-radius: 8px;	
+	box-shadow: 0 2px 10px 2px rgba(0,0,0.1);
+	
+	display: flex;	
+	justify-content: space-around;
+	
+	position: relative;
+	overflow: hidden;
+}
+/*quand on clique sur la nav*/
+nav a{	
 	color: white;
+
+	font-size: 79%;
+	padding: 15px;
+
+	display: inline-block;
+	text-align: center;
+
+	position: relative;
+	z-index: 1;
+}
+nav a:hover{/*quand on passe sur les liens de la nav avec la souris*/
+	font-size: 85%;
+	color: black;
+}
+/*l'animation verte sur la nav*/
+nav .animation{
+	background: #1abc9c;
+	border-radius: 8px;
+	height: 100%;
+
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	transition: all .5s ease 0s;
+}
+nav a:nth-child(1){/*Controle le lien Acceuil*/
+	width: 20%;
+}
+nav .start-home, a:nth-child(1):hover~.animation{/*Controle l'animation verte sur le lien Acceuil*/
+	width: 20%;
+	left: 0;
+}
+nav a:nth-child(2){/*Controle le lien Mission1*/
+	width: 20%;
+}
+nav a:nth-child(2):hover~.animation{/*Controle l'animation verte sur le lien Mission1*/
+	width: 20%;
+	left: 20%;
+}
+nav a:nth-child(3){/*Controle le lien Mission2*/
+	width: 20%;
+}
+nav a:nth-child(3):hover~.animation{/*Controle l'animation verte sur le lien Mission2*/
+	width: 20%;
+	left: 40%;
+}
+nav a:nth-child(4){/*Controle le lien Mission3*/
+	width: 20%;
+}
+nav a:nth-child(4):hover~.animation{/*Controle l'animation verte sur le lien Mission3*/
+	width: 20%;
+	left: 60%;
+}
+nav a:nth-child(5){/*Controle le lien Rapport*/
+	width: 20%;
+}
+nav a:nth-child(5):hover~.animation{/*Controle l'animation verte sur le lien Rapport*/
+	width: 20%;
+	left: 80%;
+}/*fin animation verte*/
+/* fin nav */
+/*fin Header*/
+
+
+/* Main */
+main{
+	width: 100%;
+	color: white;
+}	
+.main1 p{
+	margin-left: 3px;
+}
+.main2 p{
+	margin-left: 3px;
 }
 ul{
 	list-style-type: none;
@@ -24,123 +134,18 @@ ul{
 h3 a{
 	color: white;
 }
-
-/*Block du logo*/
-.logo-kdou{
-	width: 100px;
-	height: 100px;
-	position: relative;
-	left: 50%;
-}
-.logo-kdou img {
-	position: relative;
-	right: 200px;
-	bottom: 80px;
-	top: -50px;
-	width: 400px;
-	height: 250px;
-}
-h1{    
-    text-align: center;
-    font-family: cursive;
-    text-transform: uppercase;
-	font-size: 140%;
-}
 h2{
     font-family: cursive;
 }
-a{
+a{/*lien sur nos prenoms*/
     text-decoration: none;
 }
-
-/*navigation atractive*/
-nav{
-    font-family: 'Open Sans', sans-serif;
-	margin: 20px auto 0;
-	width: 580px;
-	height: 50px;
-
-	display: flex;	
-	justify-content: space-around;
-
-	background: #34495e;
-	border-radius: 8px;	
-	box-shadow: 0 2px 10px 2px rgba(0,0,0.1);
-	
-	position: relative;
-	overflow: hidden;
-}
-/*quand on clique sur la nav*/
-
-nav a{
-	font-size: 79%;
-	color: white;
-	padding: 15px;
-	position: relative;
-	z-index: 1;
-	display: inline-block;
-	text-align: center;
-}
-nav a:hover{/*quand on passe sur les lien de la nav avec la souris*/
-	font-size: 85%;
-	color: black;
-}
-
-/*l'animation verte sur la nav*/
-nav .animation{
-	position: absolute;
-	height: 100%;
-	top: 0;
-	z-index: 0;
-	background: #1abc9c;
-	border-radius: 8px;
-	transition: all .5s ease 0s;
-}
-
-nav a:nth-child(1){
-	width: 20%;
-}
-nav .start-home, a:nth-child(1):hover~.animation{
-	width: 20%;
-	left: 0;
-}
-nav a:nth-child(2){
-	width: 20%;
-}
-nav a:nth-child(2):hover~.animation{
-	width: 20%;
-	left: 20%;
-}
-nav a:nth-child(3){
-	width: 20%;
-}
-nav a:nth-child(3):hover~.animation{
-	width: 20%;
-	left: 40%;
-}
-nav a:nth-child(4){
-	width: 20%;
-}
-nav a:nth-child(4):hover~.animation{
-	width: 20%;
-	left: 60%;
-}
-nav a:nth-child(5){
-	width: 20%;
-}
-nav a:nth-child(5):hover~.animation{
-	width: 20%;
-	left: 80%;
-}
-/*fin*/
-
-
-/*animation sur nos noms*/
-h3 a:hover{
+h3 a:hover{/*animation sur nos noms*/
 	color: pink;
 }/*fin animation nom*/
+/* Fin du Main */
 
-/*le footer*/
+/*Footer*/
 footer{
 	width: 100%;
 	background-color: #1e1f26;
@@ -148,18 +153,27 @@ footer{
 	display: flex;
 	flex-direction: column;
 }
-.footer1{
+footer h1{ /*Titre de la page*/
+	position: relative;   
+    font-family: cursive;
+    text-transform: uppercase;
+	font-size: 100%;
+}
+.footer1 p{
+	margin-left: 3px;
+}
+.footer1{/*partie contact*/
 	display: flex;
 	justify-content: space-around;
 }
-.footer1 div{
+.footer1 div{/*Partie 1 contact du footer*/
 	flex-direction: row;
 	width: 33%;
 }
-.footer1 h1{
+.footer1 h1{/*Titre dans la partie contact du footer*/
 	text-align: left;
 }
-.footer1 button{
+.footer1 button{/*button dans le footer*/
 	font-size: 1.4rem;
 	border: none;
 	color: #dcdcdc;
@@ -168,10 +182,10 @@ footer{
 	margin: 0 auto;	
 	background-color: #1b008d;
 }
-.footer1 button:hover{
+.footer1 button:hover{/*passage de la souris sur les button dans le footer*/
 	width: 79%;
 }
-.footer2{
+.footer2{/*Footer partie ligne blanche*/
 	position: relative;
 	top: 10px;
 	height: 0.5px;
@@ -180,23 +194,25 @@ footer{
 	width: 90%;
 	margin: 0 auto;
 }
-.footer3{
+.footer3{/*Footer partie copyright*/
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	text-align: center;
 	color: #737477;
 }
-.footer3 ul{
+.footer3 p{/*paragraphe partie copyright*/
+	text-align: center;
+}
+.footer3 ul{/*conditions d'utilisation*/
 	display: flex;
-	flex-direction: row;
+	gap: 1%;
 	font-size: 80%;
 	justify-content: center;
-	gap: 15px;
 }
-.footer3 a{
+.footer3 a{/*Lien dans le Footer*/
 	color: #737477;
-}/* fin du footer */
+}
+/* Fin du Footer */
 
 /*flèche pour retourner en haut*/
 /* .returnHeight{
@@ -217,7 +233,7 @@ footer{
 /*fin fleche*/
 
 /*media query permet d'ajuster l'ecran quand on change de d'appareil ou quand on reduit la taille de l'onglet */
-@media (max-width:700px){
+@media screen and (max-width:700px){
 	header{
 		padding: 10px;
 	}
@@ -276,7 +292,7 @@ footer{
 		font-size: 90%;
 	}
 }
-@media (max-width:500px){
+@media screen and (max-width:500px){
 	h1{
 		font-size: 140%;
 	}
