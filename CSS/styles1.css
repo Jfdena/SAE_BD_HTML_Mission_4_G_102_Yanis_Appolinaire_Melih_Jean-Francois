@@ -3,7 +3,6 @@
 
 body {
 	background: #2c3e50;    
-	font-family: sans-serif;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -18,16 +17,17 @@ header{
 	height: auto;
 	margin: 0;
 	padding: 20px;
+
 	border: solid #34495e;
 	border-radius: 10px;
 	box-sizing: border-box;
 	background: linear-gradient(135deg, #1e1f26, #4a80e6,#1e1f26);
-
+	font-family: sans-serif;
+	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	overflow: hidden;
-
 }
 header h1{ /*Titre de la page*/
 	position: relative;   
@@ -122,6 +122,9 @@ main{
 	width: 100%;
 	color: white;
 }	
+.main-pageAcceuil{
+	font-family: sans-serif;
+}
 .main1 p{
 	margin-left: 3px;
 }
@@ -147,6 +150,7 @@ h3 a:hover{/*animation sur nos noms*/
 
 /*Footer*/
 footer{
+	font-family: sans-serif;
 	width: 100%;
 	background-color: #1e1f26;
 	color: #dcdcdc;

@@ -1,4 +1,74 @@
-
-main{
-    color: black;
+.main-pageMissions1{
+    font-family: cursive;
 }
+section{
+    margin: 5px;
+}
+.section2-mission1 > div{
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+}
+.section2-mission1 h3{
+    background-color: black;
+}
+.Outils-Fournis1 h3{
+    text-align: center;
+}
+.Outils-Fournis1 p{
+    margin-top: 30px;
+    margin-bottom: 156px;
+}
+.Outils-Fournis1 span{
+    display: flex;
+    justify-content: center;
+    background-color: pink;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: black;
+    align-items: center;
+}
+.Outils-Fournis1 img{
+    position: relative;
+    left: 20px;
+    width: 30px;
+    height: 90%;
+}
+.Outils-Fournis1 a:hover{
+    width: 32px;
+}
+.table-Base1{
+    display: flex;
+    flex-direction: column;
+}
+.table-Base1 h3{
+    text-align: center;
+}
+.table-Base1 ul{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+}
+.table-Base1 li{
+    border: 2px solid black;
+    background-color: pink;
+    border-radius: 10px;
+    text-align: center;
+
+}
+.Questions-Mission1{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Questions-Mission1 img{
+    width: 90%;
+}
+.section2-mission1 > span img{
+    width: 500px;
+
+}
+
+
