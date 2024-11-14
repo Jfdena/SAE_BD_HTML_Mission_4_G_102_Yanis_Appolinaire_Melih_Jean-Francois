@@ -20,8 +20,184 @@
     </nav>
   </header>
   <main>
-    <div class="Principal">
-    </div>
+    <section>
+      <h2>Contexte de la Mission 2</h1>
+      <p>Dans cette mission, nous exploitons la base de données de KDou en utilisant une interface low-code (comme Access ou un autre outil QBE). Cette approche permet de générer des requêtes SQL de manière graphique et simplifiée, facilitant l’extraction des données importantes sans nécessairement écrire de code SQL manuellement. L’objectif est d’analyser les données de clients, de fournisseurs, et de produits pour fournir des insights clés qui peuvent aider KDou à ajuster sa stratégie.</p>
+    </section>
+    <section>
+      <h2>I- Étape 1 : Etude de la base de données</h2>
+      <p>Une interace Low Code contenant la base de donnée de Kdou nous a été fournis et nous devons l'étudier pour ensuite répondre aux questions.</p>
+    </section>
+    <section class="section2-mission1">        
+      <h2>II- Étape 2 : L’analyse des données</h2>
+      <div>
+        <div class="Outils-Fournis1">
+          <h3>Outils Fournis🔧</h3>
+          <p>Nous avons juste une Base de donnée qui est fournis dans un interface Low Code Access qui permet de voir les relations entre les différentes tables pour ensuite répondre aux questions.</p>
+          <span>Access<a target="_blank" href="../Logiciel/kdouBase.accdb"download><img src="../IMG/access.png" alt="logoExcel"></a></span>
+        </div>
+        <div class="table-Base1">
+          <h3>Table de la Base🗄️</h3>
+          <ul>
+            <li>
+              <select name="Fournisseur" id="Fournisseur">
+                <option value="N°Fournisseur">N°Fournisseur</option>
+                <option value="Société">Société</option>
+                <option value="Contact">Contact</option>
+                <option value="Fonction">Fonction</option>
+                <option value="Adresse">Adresse</option>
+                <option value="Ville">Ville</option>
+                <option value="Région">Région</option>
+                <option value="Code postal">Code postal</option>
+                <option value="Pays">Pays</option>
+                <option value="Téléphone">Téléphone</option>
+              </select>Fournisseur 🏭
+            </li>
+            <li>
+              <select name="Produit" id="Produit">
+                <option value="Réf produit">Réf produit</option>
+                <option value="N° fournisseur">N° fournisseur</option>
+                <option value="Code catégorie">Code catégorie</option>
+                <option value="Nom du produit">Nom du produit</option>
+                <option value="Quantité par unité">Quantité par unité</option>
+                <option value="Prix unitaire">Prix unitaire</option>
+                <option value="Unités en stock">Unités en stock</option>
+              </select>Produit 📦
+            </li>
+            <li>
+              <select name="Catégorie" id="Catégorie">
+                <option value="Code catégorie">Code catégorie</option>
+                <option value="Nom de catégorie">Nom de catégorie</option>
+                <option value="Description">Description</option>
+              </select>Catégorie 🗂️
+            </li>
+            <li>
+              <select name="Clientèle" id="Clientèle">
+                <option value="Code client">Code client</option>
+                <option value="Société">Société</option>
+                <option value="Contact">Contact</option>
+                <option value="Adresse">Adresse</option>
+                <option value="Ville">Ville</option>
+                <option value="Code postal">Code postal</option>
+                <option value="Pays">Pays</option>
+                <option value="Téléphone">Téléphone</option>
+              </select>Clientèle 🧑‍🤝‍🧑
+            </li>
+            <li>
+              <select name="Commande" id="Commande">
+                <option value="N° commande">N° commande</option>
+                <option value="Code client">Code client</option>
+                <option value="Date commande">Date commande</option>
+                <option value="A livrer avant">A livrer avant</option>
+                <option value="Date envoi">Date envoi</option>
+                <option value="Port">Port</option>
+              </select>Commande 🛒
+            </li>
+            <li>
+              <select name="DetailCommande" id="DetailCommande">
+              <option value="Réf produit">Réf produit</option>
+              <option value="N° commande">N° commande</option>
+              <option value="Prix unitaire">Prix unitaire</option>
+              <option value="Quantité">Quantité</option>
+              <option value="Remise (%)">Remise (%)</option>
+              </select>DetailCommande 🔍
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Présentation des Indicateurs</h2>
+      <p>Voici quatre indicateurs sélectionnés et analysés dans cette mission. Chaque indicateur inclut son énoncé, une interprétation, un tableau ou une capture d’écran des résultats, et le code SQL généré.</p>
+      <div>
+        <h3>Indicateur 1 : Nombre de Clients Nantais</h3>
+        <span>
+          <h4>Énoncé :</h4>
+          <p>Nombre total de clients résidant à Nantes. </p>
+        </span>
+        <span>
+          <h4>Interprétation :</h4>
+          <p>Cet indicateur aide à comprendre la répartition géographique de la clientèle de KDou. Un nombre élevé de clients dans une région peut justifier des investissements ciblés en logistique ou marketing dans cette zone.</p>
+        </span>
+        <div> 
+          <h4>Résultat :</h4>
+          <p>Nombre de clients nantais : 5</p>
+          <p>SELECT COUNT(*)
+            FROM Client
+            WHERE Client.VilleCli = "Nantes";</p>
+            <div>
+              <img src="../IMG/nbClientNantes.png" alt="">
+              <img src="../IMG/Nantes.png" alt="">
+            </div>
+        </div>       
+      </div>
+      <div>
+        <h3>Indicateur 2 : Produits d’Italie ou d’Allemagne Vendus à Moins de 50 €</h3>
+        <span>
+          <h4>Énoncé :</h4>
+          <p> Liste des produits italiens ou allemands dont le prix est inférieur à 50 €.</p>
+        </span>
+        <span>
+          <h4>Interprétation :</h4>
+          <p>Cet indicateur permet d'identifier les produits compétitifs en termes de prix. Connaître ces produits peut aider KDou à se positionner sur le marché et à cibler des clients sensibles aux prix.</p>
+        </span>
+        <div> 
+          <h4>Résultat :</h4>
+          <p>SELECT Produit.RefProd, Produit.NomProd
+            FROM Produit INNER JOIN Fournisseur ON Produit.NoFour = Fournisseur.NoFour
+            WHERE Produit.PrixUnit < 50 AND (Fournisseur.Pays = "Italie" OR Fournisseur.Pays = "Allemagne");</p>
+            <div>
+              <img src="../IMG/Produit.png" alt="">
+            </div>
+        </div>
+      </div>
+      <div>
+        <h3>Indicateur 3 : Chiffre d'Affaires Total Généré</h3>
+        <span>
+          <h4>Énoncé :</h4>
+          <p>Calcul du chiffre d'affaires total généré par KDou.</p>
+        </span>
+        <span>
+          <h4>Interprétation :</h4>
+          <p>Le chiffre d'affaires total est un indicateur de performance essentiel pour évaluer la rentabilité de l'entreprise. Ce montant est crucial pour les décisions stratégiques de KDou.</p>
+        </span>
+        <div> 
+          <h4>Résultat :</h4>
+          <p>SELECT SUM(QteCom * PrixUnitCli * (1 - Remise / 100)) AS ChiffreAffairesTotal
+            FROM DetailCommande INNER JOIN Produit ON DetailCommande.RefProd =
+            Produit.RefProd;</p>
+            <div>
+              <img src="../IMG/ChiffreAf.png" alt="">
+            </div>
+        </div>
+      </div>
+      <div>
+        <h3>Indicateur 4 : Produits de Type Viande Livrés à Paris</h3>
+        <span>
+          <h4>Énoncé :</h4>
+          <p>Liste des produits de type "viande" qui ont été livrés à Paris.</p>
+        </span>
+        <span>
+          <h4>Interprétation :</h4>
+          <p>Cet indicateur montre quels produits spécifiques sont livrés dans une grande ville comme Paris, aidant KDou à cibler l'approvisionnement et la logistique pour répondre aux besoins des grandes métropoles.</p>
+        </span>
+        <div> 
+          <h4>Résultat :</h4>
+          <p>SELECT Produit.RefProd, Produit.NomProd
+            FROM ((Client 
+            INNER JOIN Commande ON Client.CodeCli = Commande.CodeCli)
+            INNER JOIN DetailCommande ON Commande.NoCom = DetailCommande.NoCom)
+            INNER JOIN Produit ON DetailCommande.RefProd = Produit.RefProd
+            WHERE Produit.CodeCateg = 6
+            AND Client.VilleCli = "Paris";
+            </p>
+            <div>
+              <img src="../IMG/ListeParis.png" alt="">
+            </div>
+        </div>
+      </div>
+    
+    </section>
   </main>
   <footer> 
     <div class="footer1">

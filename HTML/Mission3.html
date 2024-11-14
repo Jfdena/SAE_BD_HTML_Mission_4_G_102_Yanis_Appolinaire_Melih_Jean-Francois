@@ -20,6 +20,91 @@
     </nav>
   </header>
   <main>
+    <section>
+      <h2>Contexte de la Mission 3</h2>
+      <p>Dans cette mission, nous explorons la base de données de KDou en utilisant le langage SQL pour extraire des indicateurs clés dans quatre thèmes principaux : Desserts/boissons, l'offre de KDou, provenance des produits, et la clientèle. Voici les indicateurs choisis pour chaque thème, avec l'énoncé, la construction de la requête SQL, et les résultats obtenus.</p>
+    </section>
+    <section class="section2-mission1">        
+      <h2>I- L’analyse des données </h2>
+      <div>
+        <div class="Outils-Fournis1">
+          <h3>Outils Fournis🔧</h3>
+          <p>Nous avons juste une Base de donnée qui est fournis dans un interface Low Code Access qui permet de voir les relations entre les différentes tables pour ensuite répondre aux questions.</p>
+          <span>Access<a target="_blank" href="../Logiciel/kdouBase.accdb"download><img src="../IMG/access.png" alt="logoExcel"></a></span>
+        </div>
+        <div class="table-Base1">
+          <h3>Table de la Base🗄️</h3>
+          <ul>
+            <li>
+              <select name="Fournisseur" id="Fournisseur">
+                <option value="N°Fournisseur">N°Fournisseur</option>
+                <option value="Société">Société</option>
+                <option value="Contact">Contact</option>
+                <option value="Fonction">Fonction</option>
+                <option value="Adresse">Adresse</option>
+                <option value="Ville">Ville</option>
+                <option value="Région">Région</option>
+                <option value="Code postal">Code postal</option>
+                <option value="Pays">Pays</option>
+                <option value="Téléphone">Téléphone</option>
+              </select>Fournisseur 🏭
+            </li>
+            <li>
+              <select name="Produit" id="Produit">
+                <option value="Réf produit">Réf produit</option>
+                <option value="N° fournisseur">N° fournisseur</option>
+                <option value="Code catégorie">Code catégorie</option>
+                <option value="Nom du produit">Nom du produit</option>
+                <option value="Quantité par unité">Quantité par unité</option>
+                <option value="Prix unitaire">Prix unitaire</option>
+                <option value="Unités en stock">Unités en stock</option>
+              </select>Produit 📦
+            </li>
+            <li>
+              <select name="Catégorie" id="Catégorie">
+                <option value="Code catégorie">Code catégorie</option>
+                <option value="Nom de catégorie">Nom de catégorie</option>
+                <option value="Description">Description</option>
+              </select>Catégorie 🗂️
+            </li>
+            <li>
+              <select name="Clientèle" id="Clientèle">
+                <option value="Code client">Code client</option>
+                <option value="Société">Société</option>
+                <option value="Contact">Contact</option>
+                <option value="Adresse">Adresse</option>
+                <option value="Ville">Ville</option>
+                <option value="Code postal">Code postal</option>
+                <option value="Pays">Pays</option>
+                <option value="Téléphone">Téléphone</option>
+              </select>Clientèle 🧑‍🤝‍🧑
+            </li>
+            <li>
+              <select name="Commande" id="Commande">
+                <option value="N° commande">N° commande</option>
+                <option value="Code client">Code client</option>
+                <option value="Date commande">Date commande</option>
+                <option value="A livrer avant">A livrer avant</option>
+                <option value="Date envoi">Date envoi</option>
+                <option value="Port">Port</option>
+              </select>Commande 🛒
+            </li>
+            <li>
+              <select name="DetailCommande" id="DetailCommande">
+              <option value="Réf produit">Réf produit</option>
+              <option value="N° commande">N° commande</option>
+              <option value="Prix unitaire">Prix unitaire</option>
+              <option value="Quantité">Quantité</option>
+              <option value="Remise (%)">Remise (%)</option>
+              </select>DetailCommande 🔍
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+
+    </section>
   </main>
   <footer> 
     <div class="footer1">

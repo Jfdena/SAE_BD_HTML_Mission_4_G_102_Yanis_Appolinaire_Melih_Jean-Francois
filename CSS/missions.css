@@ -1,14 +1,16 @@
-.main-pageMissions1{
+
+main{
     font-family: cursive;
 }
-/* section2-mission1  */
+/* Mission 1 ET 2 ET 3 Code */
+/* section2-mission1 */
 section{
     margin: 5px;
 }
 .section2-mission1 > div{/*div de section grid*/
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100% 100% ;
+    grid-template-rows: 100% ;
 }
 .section2-mission1 h3{/*titre h3 */
     background-color: black;
@@ -60,10 +62,10 @@ section{
 select{/*les select*/
     background-color: grey;
 }
-/* fin section2-mission1 */
+/* Fin section2-mission1 ET 2 ET 3 Code*/
 
 
-/* Section Bilan */
+/* Section Bilan mission1 */
 .Bilan1 h3{
     text-align: center;
     color: skyblue;
@@ -76,7 +78,7 @@ select{/*les select*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    color: skyblue;
+    color: black;
 }
 .Identification1 h4{
     text-align: center;
@@ -101,7 +103,7 @@ select{/*les select*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    color: skyblue;
+    color: black;
 }
 .Recherche1 h4{/*titre de la section Recherche*/
     text-align: center;
@@ -131,4 +133,14 @@ select{/*les select*/
     border-radius: 10px;
     padding: 3px;
 }
+.Conclusion1 h3{
+    color: skyblue;
+    text-align: center;
+}
+/* Fin Mission 1 Code */
+
+
+/* Mission 2 Code */
+
+
 
