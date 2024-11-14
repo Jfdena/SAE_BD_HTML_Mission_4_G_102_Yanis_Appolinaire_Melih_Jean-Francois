@@ -1,74 +1,134 @@
 .main-pageMissions1{
     font-family: cursive;
 }
+/* section2-mission1  */
 section{
     margin: 5px;
 }
-.section2-mission1 > div{
+.section2-mission1 > div{/*div de section grid*/
     display: grid;
-    grid-template-columns: 30% 30% 40%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100% 100% ;
 }
-.section2-mission1 h3{
+.section2-mission1 h3{/*titre h3 */
     background-color: black;
 }
-.Outils-Fournis1 h3{
+.Outils-Fournis1 h3{/*titre dans outils fournis*/
     text-align: center;
 }
-.Outils-Fournis1 p{
+.Outils-Fournis1 p{/*texte dans outils fournis*/
     margin-top: 30px;
-    margin-bottom: 156px;
 }
-.Outils-Fournis1 span{
+.Outils-Fournis1 span{/*Excel*/
     display: flex;
     justify-content: center;
-    background-color: pink;
+    background-color: grey;
     border-radius: 10px;
     border: 2px solid black;
     color: black;
-    align-items: center;
 }
-.Outils-Fournis1 img{
+.Outils-Fournis1 img{/*image excel*/
     position: relative;
     left: 20px;
     width: 30px;
     height: 90%;
 }
-.Outils-Fournis1 a:hover{
+.Outils-Fournis1 a:hover{/*hover sur le excel*/
     width: 32px;
 }
-.table-Base1{
+.table-Base1{/*table de la base*/
     display: flex;
     flex-direction: column;
 }
-.table-Base1 h3{
+.table-Base1 h3{/*titre de la table de la base*/
     text-align: center;
 }
-.table-Base1 ul{
+.table-Base1 ul{/*liste non ordonnee de la table de la base*/
     color: black;
     display: flex;
     flex-direction: column;
     padding: 0;
-    gap: 20px;
+    gap: 15px;
 }
-.table-Base1 li{
+.table-Base1 li{/*liste de la table de la base*/
     border: 2px solid black;
-    background-color: pink;
+    background-color: grey;
     border-radius: 10px;
     text-align: center;
 
 }
-.Questions-Mission1{
+select{/*les select*/
+    background-color: grey;
+}
+/* fin section2-mission1 */
+
+
+/* Section Bilan */
+.Bilan1 h3{
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    color: skyblue;
 }
-.Questions-Mission1 img{
-    width: 90%;
+.Bilan1 > p{
+    color: skyblue;
+    text-align: center;
 }
-.section2-mission1 > span img{
-    width: 500px;
+.Identification1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    color: skyblue;
+}
+.Identification1 h4{
+    text-align: center;
+}
+.Identification1 h5{
+    text-align: center;
+}
+.Identification1 span{
+    grid-column: span 2;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 10px 10px 0 0;
+}
+.Identification1 div{
+    padding: 3px;
+    border: 2px solid black;
+    background-color: gray;
+    border-radius:10px ;
+}
+.Recherche1{/*section Recherche*/
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    color: skyblue;
+}
+.Recherche1 h4{/*titre de la section Recherche*/
+    text-align: center;
+}
+.Recherche1 span{/*Span de la section Recherche*/
+    grid-column: span 2;
+    background-color: grey;
+    border: 2px solid black;
+}
+.Recherche1 div{/*Div de la section Recherche*/
+    padding: 3px;
+    border: 2px solid black;
+    background-color: gray;
+    border-radius:10px ;
+    text-align: center;
+}
+.Produit-commandé{/*4eme lignes sur les infos clés*/
+    grid-column: span 2;
+}
+/* fin du Bilan */
 
+/* Partie Conclusion */
+.Conclusion1{
+    color: black;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3px;
 }
-
 

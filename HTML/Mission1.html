@@ -47,20 +47,132 @@
         <div class="table-Base1">
           <h3>Table de la Base🗄️</h3>
           <ul>
-            <li>Fournisseur 🏭</li>
-            <li>Produit 📦</li>
-            <li>Catégorie 🗂️</li>
-            <li>Clientèle 🧑‍🤝‍🧑</li>
-            <li>Commande 🛒</li>
-            <li>DetailCommande 🔍</li>
+            <li>
+              <select name="Fournisseur" id="Fournisseur">
+                <option value="N°Fournisseur">N°Fournisseur</option>
+                <option value="Société">Société</option>
+                <option value="Contact">Contact</option>
+                <option value="Fonction">Fonction</option>
+                <option value="Adresse">Adresse</option>
+                <option value="Ville">Ville</option>
+                <option value="Région">Région</option>
+                <option value="Code postal">Code postal</option>
+                <option value="Pays">Pays</option>
+                <option value="Téléphone">Téléphone</option>
+              </select>Fournisseur 🏭
+            </li>
+            <li>
+              <select name="Produit" id="Produit">
+                <option value="Réf produit">Réf produit</option>
+                <option value="N° fournisseur">N° fournisseur</option>
+                <option value="Code catégorie">Code catégorie</option>
+                <option value="Nom du produit">Nom du produit</option>
+                <option value="Quantité par unité">Quantité par unité</option>
+                <option value="Prix unitaire">Prix unitaire</option>
+                <option value="Unités en stock">Unités en stock</option>
+              </select>Produit 📦
+            </li>
+            <li>
+              <select name="Catégorie" id="Catégorie">
+                <option value="Code catégorie">Code catégorie</option>
+                <option value="Nom de catégorie">Nom de catégorie</option>
+                <option value="Description">Description</option>
+              </select>Catégorie 🗂️
+            </li>
+            <li>
+              <select name="Clientèle" id="Clientèle">
+                <option value="Code client">Code client</option>
+                <option value="Société">Société</option>
+                <option value="Contact">Contact</option>
+                <option value="Adresse">Adresse</option>
+                <option value="Ville">Ville</option>
+                <option value="Code postal">Code postal</option>
+                <option value="Pays">Pays</option>
+                <option value="Téléphone">Téléphone</option>
+              </select>Clientèle 🧑‍🤝‍🧑
+            </li>
+            <li>
+              <select name="Commande" id="Commande">
+                <option value="N° commande">N° commande</option>
+                <option value="Code client">Code client</option>
+                <option value="Date commande">Date commande</option>
+                <option value="A livrer avant">A livrer avant</option>
+                <option value="Date envoi">Date envoi</option>
+                <option value="Port">Port</option>
+              </select>Commande 🛒
+            </li>
+            <li>
+              <select name="DetailCommande" id="DetailCommande">
+              <option value="Réf produit">Réf produit</option>
+              <option value="N° commande">N° commande</option>
+              <option value="Prix unitaire">Prix unitaire</option>
+              <option value="Quantité">Quantité</option>
+              <option value="Remise (%)">Remise (%)</option>
+              </select>DetailCommande 🔍
+            </li>
           </ul>
         </div>
-        <div class="Questions-Mission1">
-          <h3>Questions Missions 1</h3>
-          <div><img src="../IMG/Qmission1.png" alt=""></div>
+      </div>
+    </section>
+    <section class="Bilan1">
+      <h3>-Bilan Structuré sur l'Étude des Données</h3>
+      <p>Dans cette première mission, l’étude des données de la base de KDou se concentre sur la compréhension de la structure de la base de données, l’analyse des relations entre les tables, et l'exploration d'informations spécifiques.</p>
+      <div class="Identification1">
+        <span>
+          <h4>Identification des Clés Primaires et Clés Étrangères</h4>
+        </span>
+        <div>
+          <h5>Clé Primaires</h5>
+          <p> Pour chaque table, une clé primaire unique a été identifiée. Ces clés assurent que chaque enregistrement est unique et facile à référencer. Par exemple, la table Clients utilise ClientID comme clé primaire, garantissant l'identification unique de chaque client.</p>
+        </div>
+        <div>
+          <h5>Clés Étrangères</h5>
+          <p>Les clés étrangères servent à relier les tables entre elles. Par exemple, FournisseurID dans la table Produits relie chaque produit à un fournisseur, permettant des requêtes inter-tables et une navigation structurée dans la base.</p>
         </div>
       </div>
-      <span><img src="../IMG/kdouLogo.webp" alt=""></span>
+      <div class="Recherche1">
+        <span>
+          <h4>Recherche d'Informations Clés</h4>        
+          <p>Plusieurs recherches ont été effectuées pour répondre aux questions posées et vérifier les capacités d'interrogation de la base de données. Voici un résumé des résultats</p>
+        </span>
+          <div>
+            <h5>Nombre de clients nantais</h5>
+            <p>5 clients résidant à Nantes ont été identifiés, permettant une meilleure compréhension de la répartition géographique des clients.</p>
+          </div>
+          <div>
+            <h5>Fournisseurs en Amérique du Nord</h5>
+            <p>3 fournisseurs sont situés en Amérique du Nord, ce qui peut indiquer un potentiel partenariats dans cette région.</p>
+          </div>
+          <div class="Produit-commandé">
+            <h5>Produits commandés par le client Mikal Pavbo</h5>
+            <p>La liste des produits a été retrouvée, offrant des informations sur les préférences des clients et les tendances d'achat.</p>
+          </div>         
+        <span>
+          <h4>Qualité des Données</h4>
+          <p>L’analyse a permis de mettre en évidence des incohérences, comme des doublons dans les noms de pays ou des valeurs manquantes dans les informations de contact des clients et fournisseurs. Par exemple, des variations dans l’orthographe des pays (« Royaume-Uni » et « UK ») créent des risques de doublons ou de données erronées.</p>
+        </span>
+      </div>
+    </section>
+    <section class="Conclusion1">
+      <h3>Perspectives d'Amélioration et Conclusion</h3>
+      <p>Plusieurs pistes d'amélioration sont recommandées pour renforcer la cohérence et la fiabilité de la base de données</p>
+      <div>
+        <h4>- Normalisation des Données</h4>
+        <p>Une standardisation des valeurs est recommandée pour les colonnes sensibles, comme les noms de pays et les types de produits. Par exemple, un format unique pour les noms de pays serait utile pour éviter les doublons.</p>
+      </div>
+      <div>
+        <h4>- Ajout de Contraintes pour Éviter les Champs Vides</h4>
+        <p>Imposer des contraintes sur les champs critiques, comme les adresses des fournisseurs et les informations de contact des clients, pour éviter les valeurs nulles ou incorrectes.</p>
+      </div>
+      <div>
+        <h4>- Optimisation des Relations Entre Tables</h4>
+        <p>Améliorer la structuration des relations entre les tables permettrait une meilleure normalisation et des requêtes plus performantes. Cela pourrait inclure des optimisations pour garantir que chaque table n'a que les données nécessaires, réduisant ainsi les redondances et améliorant la vitesse des requêtes.</p>
+      </div>
+      <div>
+        <h4>- Conclusion</h4>
+        <p>L’étude des données pour cette mission a permis de découvrir plusieurs points faibles et des incohérences dans la base de données de KDou. Une bonne gestion des clés et une normalisation stricte sont des étapes essentielles pour garantir la fiabilité des données et faciliter leur analyse. En appliquant ces recommandations, KDou pourra mieux exploiter les informations de sa base de données pour une prise de décision plus efficace et une meilleure orientation vers ses objectifs écologiques et économiques.</p>
+      </div>
+    
     </section>
   </main>
   <footer> 
