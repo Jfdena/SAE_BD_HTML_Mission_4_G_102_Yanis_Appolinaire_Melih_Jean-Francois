@@ -236,6 +236,28 @@ footer h1{ /*Titre de la page*/
 } */
 /*fin fleche*/
 
+/* Partie Rapport */
+.Rapport section{
+	font-family: sans-serif;
+	font-family: cursive;
+	margin: 5px;
+	color: black;
+}
+.Rapport .logo-kdou{
+	display: flex;
+	justify-content: center;
+
+}
+.Rapport img{
+	width: 30%;
+}
+.RpConclu{
+	position: relative;
+	bottom: 90px;
+	text-align: center;
+}
+
+
 /*media query permet d'ajuster l'ecran quand on change de d'appareil ou quand on reduit la taille de l'onglet */
 @media screen and (max-width:700px){
 	header{

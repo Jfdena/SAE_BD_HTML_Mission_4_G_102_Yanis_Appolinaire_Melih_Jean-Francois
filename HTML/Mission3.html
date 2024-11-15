@@ -103,7 +103,156 @@
       </div>
     </section>
     <section>
-
+      <h3>Desserts / Boissons</h3>
+      <article>
+        <div>
+          <h4>Indicateur 1 : Nombre de Desserts et Boissons Vendus à 50 € ou Plus</h4>
+          <span>
+            <h5>Énoncé :</h5>
+            <p>Trouver le nombre de produits de catégories "Desserts" et "Boissons" vendus à un prix de 50 € ou plus.</p>
+          </span>
+          <span>
+            <h5>Construction de la Requête SQL :</h5>
+            <p>La requête filtre les produits en fonction de la catégorie (desserts ou boissons) et du prix (≥ 50 €).</p>
+          </span>
+          <span>
+            <h5>Résultat :</h5>
+            <p></p>
+            <div><img src="../" alt=""></div>
+          </span>
+        </div>
+        <div>
+          <h4>Indicateur 2 : Chiffre d'Affaires par Catégorie (Desserts et Boissons)</h4>
+          <span>
+            <h5>Énoncé :</h5>
+            <p>Calculer le chiffre d'affaires total pour les catégories "Desserts" et "Boissons".</p>
+          </span>
+          <span>
+            <h5>Construction de la Requête SQL :</h5>
+            <p>En utilisant une jointure entre les tables Produits et Commandes, la requête calcule le chiffre d'affaires généré par chaque catégorie.</p>
+          </span>
+          <span>
+            <h5>Résultat :</h5>
+            <p>Chiffre d'affaires total pour les desserts et les boissons</p>
+            <div><img src="../" alt=""></div>
+          </span>
+        </div>
+      </article>
+    </section>
+    <section>
+      <h3>2. Thème : L’Offre de KDou</h3>
+      <article>
+        <div>
+          <h4>Indicateur 1 : Produits Non Commandés</h4>
+          <span>
+            <h5>Énoncé :</h5>
+            <p>Identifier les produits dans la base de données qui n'ont pas été commandés.</p>
+          </span>
+          <span>
+            <h5>Construction de la Requête SQL :</h5>
+            <p>La requête sélectionne les produits en utilisant une sous-requête pour exclure les produits présents dans la table Commandes.</p>
+          </span>
+          <span>
+            <h5>Résultat :</h5>
+            <p></p>
+            <div><img src="../" alt=""></div>
+          </span>
+        </div>
+        <div>
+          <h4>Indicateur 2 : Nombre de Produits Non Commandés par Catégorie</h4>
+          <span>
+            <h5>Énoncé :</h5>
+            <p>Compter le nombre de produits non commandés pour chaque catégorie.</p>
+          </span>
+          <span>
+            <h5>Construction de la Requête SQL :</h5>
+            <p>Cette requête utilise une jointure pour regrouper les produits par catégorie et compter ceux qui n'ont pas été commandés.</p>
+          </span>
+          <span>
+            <h5>Résultat :</h5>
+            <p></p>
+            <div><img src="../" alt=""></div>
+          </span>
+        </div>
+      </article>
+    </section>
+    <section>
+      <h3>3. Thème : Provenance des Produits</h3>
+      <article>
+        <div>
+          <h4>Indicateur 1 : Produits d’Allemagne Vendus Moins de 100 €</h4>
+          <span>
+            <h5>Énoncé :</h5>
+            <p>Trouver les produits de provenance allemande vendus à moins de 100 €.</p>
+          </span>
+          <span>
+            <h5>Construction de la Requête SQL :</h5>
+            <p>Filtre les produits par pays d'origine (Allemagne) et par prix (moins de 100 €).</p>
+          </span>
+          <span>
+            <h5>Résultat :</h5>
+            <p></p>
+            <div><img src="../" alt=""></div>
+          </span>
+        </div>
+        <div>
+          <h4>Indicateur 2 : Pays avec le Plus de Produits Disponibles</h4>
+          <span>
+            <h5>Énoncé :</h5>
+            <p>Identifier le pays offrant le plus grand nombre de produits dans la base.</p>
+          </span>
+          <span>
+            <h5>Construction de la Requête SQL :</h5>
+            <p>Cette requête regroupe les produits par pays d'origine et compte le nombre de produits disponibles.</p>
+          </span>
+          <span>
+            <h5>Résultat :</h5>
+            <p></p>
+            <div><img src="../" alt=""></div>
+          </span>
+        </div>
+      </article>
+    </section>
+    <section>
+      <h3>4. Thème : La Clientèle</h3>
+      <article>
+        <div>
+          <h4>Indicateur 1 : Clients Nantais Commandant en Allemagne</h4>
+          <span>
+            <h5>Énoncé :</h5>
+            <p>Identifier les clients de Nantes qui commandent des produits en provenance d'Allemagne.</p>
+          </span>
+          <span>
+            <h5>Construction de la Requête SQL :</h5>
+            <p>En combinant plusieurs conditions, la requête identifie les clients qui résident à Nantes et commandent des produits d'origine allemande.</p>
+          </span>
+          <span>
+            <h5>Résultat :</h5>
+            <p></p>
+            <div><img src="../" alt=""></div>
+          </span>
+        </div>
+        <div>
+          <h4>Indicateur 2 : Clients Sans Remise Maximale de 25%</h4>
+          <span>
+            <h5>Énoncé :</h5>
+            <p>Trouver les clients qui n’ont jamais bénéficié de la remise maximale de 25 %.</p>
+          </span>
+          <span>
+            <h5>Construction de la Requête SQL :</h5>
+            <p>Utilise une sous-requête pour exclure les clients ayant reçu une remise de 25 %.</p>
+          </span>
+          <span>
+            <h5>Résultat :</h5>
+            <p></p>
+            <div><img src="../" alt=""></div>
+          </span>
+        </div>
+      </article>
+    </section>
+    <section>
+      <h3>Conclusion</h3>
+      <p>Ces indicateurs fournissent une analyse approfondie des aspects clés de la base de données de Kdou, et met en évidence des informations stratégiques sur les produits, les clients et les performances de l'entreprise.</p>
     </section>
   </main>
   <footer> 
