@@ -8,13 +8,14 @@ body {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+
 }
 
 
 /* Header */
 header{
 	width: 100%;
-	height: auto;
+	height: 170px;
 	margin: 0;
 	padding: 20px;
 
@@ -28,6 +29,8 @@ header{
 	flex-direction: column;
 	align-items: center;
 	overflow: hidden;
+	position: fixed;
+	z-index: 5;
 }
 header h1{ /*Titre de la page*/
 	position: relative;   
@@ -121,7 +124,12 @@ nav a:nth-child(5):hover~.animation{/*Controle l'animation verte sur le lien Rap
 main{
 	width: 100%;
 	color: white;
+	font-family: cursive;
+	margin-top: 160px;
 }	
+section ul{
+	padding-right: 10px;
+}
 .main-pageAcceuil{
 	font-family: sans-serif;
 }
@@ -147,6 +155,7 @@ h3 a:hover{/*animation sur nos noms*/
 	color: pink;
 }/*fin animation nom*/
 /* Fin du Main */
+
 
 /*Footer*/
 footer{
@@ -219,7 +228,7 @@ footer h1{ /*Titre de la page*/
 /* Fin du Footer */
 
 /*flèche pour retourner en haut*/
-/* .returnHeight{
+.returnHeight{
 	position: fixed;
 	z-index: 1000;
 	bottom: -530px;
@@ -228,12 +237,12 @@ footer h1{ /*Titre de la page*/
 	height: 600px;
 }
 .returnHeight img{
-	width: 100px;
+	width: 50px;
 	height: 50px;
 }
 .returnHeight img:hover{
 	height: 56px;
-} */
+}
 /*fin fleche*/
 
 /* Partie Rapport */
@@ -241,21 +250,19 @@ footer h1{ /*Titre de la page*/
 	font-family: sans-serif;
 	font-family: cursive;
 	margin: 5px;
-	color: black;
+	color: white;
 }
-.Rapport .logo-kdou{
-	display: flex;
-	justify-content: center;
 
-}
-.Rapport img{
-	width: 30%;
-}
-.RpConclu{
-	position: relative;
-	bottom: 90px;
+.Rapport h2{
+	color: lightblue;
 	text-align: center;
+	text-decoration: underline;
 }
+.Rapport h3{
+	text-align: center;
+	color: lightblue;
+}
+/* Fin du Rapport */
 
 
 /*media query permet d'ajuster l'ecran quand on change de d'appareil ou quand on reduit la taille de l'onglet */
@@ -271,7 +278,6 @@ footer h1{ /*Titre de la page*/
 	}
 	nav a{
 		font-size: 74%;
-		padding: auto;
 		white-space: nowrap;
 	}
 	nav a:hover{/*quand on passe sur les lien de la nav avec la souris*/

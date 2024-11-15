@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentation Mission SAE BD</title>
 </head>
-<body>
+<body class="mission2">
   <header>
     <h1 class="titre-principal">Presentation Mission 2</h1>
     <nav>
@@ -21,7 +21,7 @@
   </header>
   <main>
     <section>
-      <h2>Contexte de la Mission 2</h1>
+      <h2>Contexte de la Mission 2</h2>
       <p>Dans cette mission, nous exploitons la base de données de KDou en utilisant une interface low-code (comme Access ou un autre outil QBE). Cette approche permet de générer des requêtes SQL de manière graphique et simplifiée, facilitant l’extraction des données importantes sans nécessairement écrire de code SQL manuellement. L’objectif est d’analyser les données de clients, de fournisseurs, et de produits pour fournir des insights clés qui peuvent aider KDou à ajuster sa stratégie.</p>
     </section>
     <section>
@@ -34,7 +34,7 @@
         <div class="Outils-Fournis1">
           <h3>Outils Fournis🔧</h3>
           <p>Nous avons juste une Base de donnée qui est fournis dans un interface Low Code Access qui permet de voir les relations entre les différentes tables pour ensuite répondre aux questions.</p>
-          <span>Access<a target="_blank" href="../Logiciel/kdouBase.accdb"download><img src="../IMG/access.png" alt="logoExcel"></a></span>
+          <span>Access<a target="_blank" href="../Logiciel/kdouBase.accdb"download><img src="../IMG/access.png" alt="logoAccess"></a></span>
         </div>
         <div class="table-Base1">
           <h3>Table de la Base🗄️</h3>
@@ -106,28 +106,27 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="milieuMission2">
       <h2>Présentation des Indicateurs</h2>
       <p>Voici quatre indicateurs sélectionnés et analysés dans cette mission. Chaque indicateur inclut son énoncé, une interprétation, un tableau ou une capture d’écran des résultats, et le code SQL généré.</p>
       <div>
         <h3>Indicateur 1 : Nombre de Clients Nantais</h3>
         <span>
-          <h4>Énoncé :</h4>
-          <p>Nombre total de clients résidant à Nantes. </p>
+          <h4>Énoncé</h4>
+          <p>Nombre total de clients résidant à Nantes</p>
         </span>
         <span>
-          <h4>Interprétation :</h4>
+          <h4>Interprétation</h4>
           <p>Cet indicateur aide à comprendre la répartition géographique de la clientèle de KDou. Un nombre élevé de clients dans une région peut justifier des investissements ciblés en logistique ou marketing dans cette zone.</p>
         </span>
         <div> 
-          <h4>Résultat :</h4>
-          <p>Nombre de clients nantais : 5</p>
+          <h4>Résultat</h4>
+          <p>Nombre de clients nantais : 3</p>
           <p>SELECT COUNT(*)
             FROM Client
             WHERE Client.VilleCli = "Nantes";</p>
             <div>
-              <img src="../IMG/nbClientNantes.png" alt="">
-              <img src="../IMG/Nantes.png" alt="">
+              <img class="resultatClient" src="../IMG/Nantes.png" alt="">
             </div>
         </div>       
       </div>
@@ -197,7 +196,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="conclusionMission2">
       <h3>Conclusion</h3>
       <p>En présentant ces indicateurs avec les captures d'écran et des résultats des codes sql générés, nous avons montrer comment l'interface low-code permet d'extraire facilement les informations pertinente pour Kdou. Donc ces analyses offrent une meilleure compréhension de ses ventes, de ses clients et de ses potentiels amélioration stratégique.</p>
     </section>
@@ -229,5 +228,8 @@
       </ul>
     </div>
   </footer>
+  <a class="returnHeight" href="#top">
+    <img src="../IMG/returnHeight.png" alt="Retour en haut">
+  </a>
 </body>
 </html>

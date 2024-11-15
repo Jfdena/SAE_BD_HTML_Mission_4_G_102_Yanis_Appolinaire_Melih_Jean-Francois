@@ -102,9 +102,8 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="indicateurs">
       <h3>Desserts / Boissons</h3>
-      <article>
         <div>
           <h4>Indicateur 1 : Nombre de Desserts et Boissons Vendus à 50 € ou Plus</h4>
           <span>
@@ -117,45 +116,54 @@
           </span>
           <span>
             <h5>Résultat :</h5>
-            <p></p>
-            <div><img src="../" alt=""></div>
+            <p>SELECT COUNT(Produit.CodeCateg) AS NbProd
+              FROM Produit
+              WHERE Produit.PrixUnit >= 50 AND (Produit.CodeCateg = 1 OR Produit.CodeCateg = 3)</p>
+            <div><img src="../IMG/nb.png" alt=""></div>
           </span>
         </div>
         <div>
           <h4>Indicateur 2 : Chiffre d'Affaires par Catégorie (Desserts et Boissons)</h4>
           <span>
-            <h5>Énoncé :</h5>
+            <h5>Énoncé</h5>
             <p>Calculer le chiffre d'affaires total pour les catégories "Desserts" et "Boissons".</p>
           </span>
           <span>
             <h5>Construction de la Requête SQL :</h5>
-            <p>En utilisant une jointure entre les tables Produits et Commandes, la requête calcule le chiffre d'affaires généré par chaque catégorie.</p>
+            <p>La requête calcule le chiffre d'affaires généré par chaque catégorie.</p>
           </span>
           <span>
             <h5>Résultat :</h5>
-            <p>Chiffre d'affaires total pour les desserts et les boissons</p>
-            <div><img src="../" alt=""></div>
+            <p>SELECT SUM(PrixUnit * Produit.UniteStock) AS ChiffreAf, Produit.CodeCateg
+              FROM Produit
+              WHERE Produit.CodeCateg = 1 OR Produit.CodeCateg = 3
+              GROUP BY Produit.CodeCateg;</p>
+            <div><img src="../IMG/img2.png" alt=""></div>
           </span>
         </div>
       </article>
     </section>
-    <section>
-      <h3>2. Thème : L’Offre de KDou</h3>
+    <section class="indicateurs1">
+      <h3>Thème : L’Offre de KDou</h3>
       <article>
         <div>
-          <h4>Indicateur 1 : Produits Non Commandés</h4>
+          <h4>Indicateur 1 : Fournisseur avec Produits Non Commandés</h4>
           <span>
             <h5>Énoncé :</h5>
-            <p>Identifier les produits dans la base de données qui n'ont pas été commandés.</p>
+            <p>Identifier les Fournisseurs qui ont des produits dans la base de données qui n'ont pas été commandés.</p>
           </span>
           <span>
             <h5>Construction de la Requête SQL :</h5>
-            <p>La requête sélectionne les produits en utilisant une sous-requête pour exclure les produits présents dans la table Commandes.</p>
+            <p>La requête sélectionne les fournisseurs qui ont des produits  en utilisant une sous-requête pour exclure ceux qui ont des produits présents dans la table DetailCommandes.</p>
           </span>
           <span>
             <h5>Résultat :</h5>
-            <p></p>
-            <div><img src="../" alt=""></div>
+            <p>SELECT COUNT(Produit.CodeCateg) AS NbParCateg, Produit.CodeCateg
+              FROM Produit LEFT JOIN DetailCommande ON Produit.RefProd =
+              DetailCommande.RefProd
+              WHERE DetailCommande.RefProd IS NULL
+              GROUP BY Produit.CodeCateg;</p>
+            <div><img src="../IMG/img4.png" alt=""></div>
           </span>
         </div>
         <div>
@@ -170,14 +178,18 @@
           </span>
           <span>
             <h5>Résultat :</h5>
-            <p></p>
-            <div><img src="../" alt=""></div>
+            <p>SELECT COUNT(Produit.CodeCateg) AS NbParCateg, Produit.CodeCateg
+              FROM Produit LEFT JOIN DetailCommande ON Produit.RefProd =
+              DetailCommande.RefProd
+              WHERE DetailCommande.RefProd IS NULL
+              GROUP BY Produit.CodeCateg;</p>
+            <div><img src="../IMG/img3.png" alt=""></div>
           </span>
         </div>
       </article>
     </section>
-    <section>
-      <h3>3. Thème : Provenance des Produits</h3>
+    <section class="indicateurs2">
+      <h3>Thème : Provenance des Produits</h3>
       <article>
         <div>
           <h4>Indicateur 1 : Produits d’Allemagne Vendus Moins de 100 €</h4>
@@ -191,8 +203,12 @@
           </span>
           <span>
             <h5>Résultat :</h5>
-            <p></p>
-            <div><img src="../" alt=""></div>
+            <p>SELECT Fournisseur.Pays, Produit.RefProd, Produit.NomProd, Produit.PrixUnit,
+              Produit.CodeCateg
+              FROM Fournisseur INNER JOIN Produit ON Fournisseur.NoFour = Produit.NoFour
+              WHERE Fournisseur.Pays = "Allemagne" AND (Produit.CodeCateg = 1 OR
+              Produit.CodeCateg = 3) AND Produit.PrixUnit < 100;</p>
+            <div><img src="../IMG/img1.png" alt=""></div>
           </span>
         </div>
         <div>
@@ -207,14 +223,18 @@
           </span>
           <span>
             <h5>Résultat :</h5>
-            <p></p>
-            <div><img src="../" alt=""></div>
+            <p>SELECT Fournisseur.Pays, COUNT(Produit.RefProd) AS NbProduits
+              FROM Fournisseur
+              INNER JOIN Produit ON Fournisseur.NoFour = Produit.NoFour
+              GROUP BY Fournisseur.Pays
+              ORDER BY COUNT(Produit.RefProd) DESC</p>
+            <div><img src="../IMG/nbProduitParPays.png" alt=""></div>
           </span>
         </div>
       </article>
     </section>
-    <section>
-      <h3>4. Thème : La Clientèle</h3>
+    <section class="indicateurs3">
+      <h3>Thème : La Clientèle</h3>
       <article>
         <div>
           <h4>Indicateur 1 : Clients Nantais Commandant en Allemagne</h4>
@@ -228,8 +248,20 @@
           </span>
           <span>
             <h5>Résultat :</h5>
-            <p></p>
-            <div><img src="../" alt=""></div>
+            <p>SELECT Client.CodeCli, Client.SocieteCli
+              FROM (Client
+              INNER JOIN Commande ON Client.CodeCli = Commande.CodeCli)
+              INNER JOIN (DetailCommande
+              INNER JOIN (Produit
+              INNER JOIN Fournisseur ON Produit.NoFour = Fournisseur.NoFour)
+              ON DetailCommande.RefProd = Produit.RefProd)
+              ON Commande.NoCom = DetailCommande.NoCom
+              WHERE Client.VilleCli = "Nantes"
+              AND Fournisseur.Pays = "Allemagne"
+              AND Client.SocieteCli <> "Verre à soi"
+              GROUP BY Client.CodeCli, Client.SocieteCli
+              ;</p>
+            <div><img src="../IMG/Nante.png" alt=""></div>
           </span>
         </div>
         <div>
@@ -244,13 +276,20 @@
           </span>
           <span>
             <h5>Résultat :</h5>
-            <p></p>
-            <div><img src="../" alt=""></div>
+            <p>SELECT Client.CodeCli, Client.SocieteCli
+              FROM Client
+              WHERE Client.CodeCli NOT IN (
+              SELECT Commande.CodeCli
+              FROM Commande
+              INNER JOIN DetailCommande ON Commande.NoCom = DetailCommande.NoCom
+              WHERE DetailCommande.Remise = 25
+              );</p>
+            <div><img src="../IMG/client.png" alt=""></div>
           </span>
         </div>
       </article>
     </section>
-    <section>
+    <section class="conclusion3">
       <h3>Conclusion</h3>
       <p>Ces indicateurs fournissent une analyse approfondie des aspects clés de la base de données de Kdou, et met en évidence des informations stratégiques sur les produits, les clients et les performances de l'entreprise.</p>
     </section>
@@ -282,5 +321,8 @@
       </ul>
     </div>
   </footer>
+  <a class="returnHeight" href="#top">
+    <img src="../IMG/returnHeight.png" alt="Retour en haut">
+  </a>
 </body>
 </html>

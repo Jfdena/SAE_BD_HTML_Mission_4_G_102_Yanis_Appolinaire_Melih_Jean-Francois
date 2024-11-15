@@ -69,9 +69,10 @@ select{/*les select*/
 .Bilan1 h3{
     text-align: center;
     color: skyblue;
+    text-decoration: underline;
 }
 .Bilan1 > p{
-    color: skyblue;
+    color: white;
     text-align: center;
 }
 .Identification1{
@@ -125,22 +126,146 @@ select{/*les select*/
 }
 /* fin du Bilan */
 
+
 /* Partie Conclusion */
 .Conclusion1{
-    color: black;
-    background-color: gray;
-    border: 2px solid black;
+    color: white;
+    border-top: 0;
     border-radius: 10px;
     padding: 3px;
 }
 .Conclusion1 h3{
     color: skyblue;
     text-align: center;
+    text-decoration: underline;
 }
+
+.Conclusion1 h4 {
+    text-align: center;
+    color: lightblue;
+}
+
+
 /* Fin Mission 1 Code */
 
 
 /* Mission 2 Code */
+
+.milieuMission2 h2 {
+    text-decoration: underline;
+    text-align: center;
+    color: skyblue;
+}
+
+.milieuMission2 h2 > p{
+    text-align: center;
+}
+
+.milieuMission2 h3 {
+    color: lightblue;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.milieuMission2 h4 {
+    color: lightblue;
+}
+
+.conclusionMission2 h3 {
+    text-decoration: underline;
+    text-align: center;
+    color: skyblue;
+}
+.mission2 img{
+    border-radius: 10px;
+}
+.resultatClient{
+    width: 90%;
+}
+
+/* Mission 3 Code */
+
+.indicateurs h3 {
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    color: lightblue;
+}
+
+.indicateurs h4 {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+.indicateurs h5 {
+    color: lightblue;
+
+}
+
+.indicateurs1 h3 {
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    color: lightblue;
+
+}
+
+.indicateurs1 h4 {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+.indicateurs1 h5 {
+    color: lightblue;
+    color: lightblue;
+
+}
+
+.indicateurs2 h3 {
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    color: lightblue;
+
+}
+
+.indicateurs2 h4 {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+.indicateurs2 h5 {
+    color: lightblue;
+    color: lightblue;
+
+}
+
+.indicateurs3 h3 {
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    color: lightblue;
+
+}
+
+.indicateurs3 h4 {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+.indicateurs3 h5 {
+    color: lightblue;
+
+}
+
+.conclusion3 h3 {
+    text-decoration: underline;
+    text-align: center;
+    color: lightblue;
+}
+
+
+
 
 
 

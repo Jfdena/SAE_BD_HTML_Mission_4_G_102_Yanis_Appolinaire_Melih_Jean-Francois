@@ -25,7 +25,7 @@
       <p>Dans cette première mission, l’objectif est d’analyser la structure de la base de données de KDou, une entreprise d’épicerie fine qui souhaite réorganiser son offre de produits pour être plus respectueuse de l’environnement. L'équipe doit examiner les tables et les relations, identifier les clés primaires et étrangères, et rechercher des informations spécifiques sur les clients et fournisseurs afin de mieux comprendre la répartition des données et leurs utilisations potentielles pour des analyses futures.</p>
     </section>
     <section class="section1-mission1">
-      <h2>I - Vous organiser en équipe:</h2>
+      <h2>I - Nous organiser en équipe</h2>
       <div>
         <p>Nous devions nous organiser en groupe de 4 pour réaliser cette première mission.
           Faire l'équipe n'a pas été très difficile, nous étions dans une rangée de 4 places et nous étions tous les 4 assieds et instinctivement nous nous sommes regardés et l'on a sut  que l'on devait se mettre ensemble.
@@ -38,7 +38,7 @@
         <div class="Outils-Fournis1">
           <h3>Outils Fournis🔧</h3>
           <p>Dans les outils fournis nous avons juste une base de données dans un classeur Excel que nous avons utiliser pour répondre a chaque questions a l'aide du mode QBE en base de donnée.</p>
-          <span>Exel<a target="_blank" href="../Logiciel/Excel.xlsx"download><img src="../IMG/exceller.png" alt="logoExcel"></a></span>
+          <span>Excel<a target="_blank" href="../Logiciel/Excel.xlsx"download><img src="../IMG/exceller.png" alt="logoExcel"></a></span>
         </div>
         <div class="table-Base1">
           <h3>Table de la Base🗄️</h3>
@@ -111,61 +111,26 @@
       </div>
     </section>
     <section class="Bilan1">
-      <h3>-Bilan Structuré sur l'Étude des Données</h3>
+      <h3>Bilan structuré sur l'étude des données</h3>
       <p>Dans cette première mission, l’étude des données de la base de KDou se concentre sur la compréhension de la structure de la base de données, l’analyse des relations entre les tables, et l'exploration d'informations spécifiques.</p>
-      <div class="Identification1">
-        <span>
-          <h4>Identification des Clés Primaires et Clés Étrangères</h4>
-        </span>
-        <div>
-          <h5>Clé Primaires</h5>
-          <p> Pour chaque table, une clé primaire unique a été identifiée. Ces clés assurent que chaque enregistrement est unique et facile à référencer. Par exemple, la table Clients utilise ClientID comme clé primaire, garantissant l'identification unique de chaque client.</p>
-        </div>
-        <div>
-          <h5>Clés Étrangères</h5>
-          <p>Les clés étrangères servent à relier les tables entre elles. Par exemple, FournisseurID dans la table Produits relie chaque produit à un fournisseur, permettant des requêtes inter-tables et une navigation structurée dans la base.</p>
-        </div>
-      </div>
-      <div class="Recherche1">
-        <span>
-          <h4>Recherche d'Informations Clés</h4>        
-          <p>Plusieurs recherches ont été effectuées pour répondre aux questions posées et vérifier les capacités d'interrogation de la base de données. Voici un résumé des résultats</p>
-        </span>
-          <div>
-            <h5>Nombre de clients nantais</h5>
-            <p>5 clients résidant à Nantes ont été identifiés, permettant une meilleure compréhension de la répartition géographique des clients.</p>
-          </div>
-          <div>
-            <h5>Fournisseurs en Amérique du Nord</h5>
-            <p>3 fournisseurs sont situés en Amérique du Nord, ce qui peut indiquer un potentiel partenariats dans cette région.</p>
-          </div>
-          <div class="Produit-commandé">
-            <h5>Produits commandés par le client Mikal Pavbo</h5>
-            <p>La liste des produits a été retrouvée, offrant des informations sur les préférences des clients et les tendances d'achat.</p>
-          </div>         
-        <span>
-          <h4>Qualité des Données</h4>
-          <p>L’analyse a permis de mettre en évidence des incohérences, comme des doublons dans les noms de pays ou des valeurs manquantes dans les informations de contact des clients et fournisseurs. Par exemple, des variations dans l’orthographe des pays (« Royaume-Uni » et « UK ») créent des risques de doublons ou de données erronées.</p>
-        </span>
-      </div>
     </section>
     <section class="Conclusion1">
-      <h3>Perspectives d'Amélioration et Conclusion</h3>
+      <h3>Perspectives d'amélioration et conclusion</h3>
       <p>Plusieurs pistes d'amélioration sont recommandées pour renforcer la cohérence et la fiabilité de la base de données</p>
       <div>
-        <h4>- Normalisation des Données</h4>
+        <h4>Normalisation des données</h4>
         <p>Une standardisation des valeurs est recommandée pour les colonnes sensibles, comme les noms de pays et les types de produits. Par exemple, un format unique pour les noms de pays serait utile pour éviter les doublons.</p>
       </div>
       <div>
-        <h4>- Ajout de Contraintes pour Éviter les Champs Vides</h4>
+        <h4>Ajout de contraintes pour éviter les champs vides</h4>
         <p>Imposer des contraintes sur les champs critiques, comme les adresses des fournisseurs et les informations de contact des clients, pour éviter les valeurs nulles ou incorrectes.</p>
       </div>
       <div>
-        <h4>- Optimisation des Relations Entre Tables</h4>
+        <h4>Optimisation des relations entre tables</h4>
         <p>Améliorer la structuration des relations entre les tables permettrait une meilleure normalisation et des requêtes plus performantes. Cela pourrait inclure des optimisations pour garantir que chaque table n'a que les données nécessaires, réduisant ainsi les redondances et améliorant la vitesse des requêtes.</p>
       </div>
       <div>
-        <h4>- Conclusion</h4>
+        <h4>Conclusion</h4>
         <p>L’étude des données pour cette mission a permis de découvrir plusieurs points faibles et des incohérences dans la base de données de KDou. Une bonne gestion des clés et une normalisation stricte sont des étapes essentielles pour garantir la fiabilité des données et faciliter leur analyse. En appliquant ces recommandations, KDou pourra mieux exploiter les informations de sa base de données pour une prise de décision plus efficace et une meilleure orientation vers ses objectifs écologiques et économiques.</p>
       </div>
     </section>
@@ -197,5 +162,8 @@
       </ul>
     </div>
   </footer>
+  <a class="returnHeight" href="#top">
+    <img src="../IMG/returnHeight.png" alt="Retour en haut">
+  </a>
 </body>
 </html>
